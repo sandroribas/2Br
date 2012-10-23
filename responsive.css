@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+body{width:100%; height:auto; background-image:url(img/bg.png); background-position:top left; background-repeat:no-repeat; background-color:#eeeeee;}
+
+.floatLeft, .floatRight{ display:block; margin:15px auto;}
+.imargem{ padding-left: 0px;}
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+@media only screen and (max-width: 480px) {
+	.gridContainer {
+		margin-left: auto;
+		margin-right: auto;
+		width: 87.36%;
+		padding-left: 1.82%;
+		padding-right: 1.82%;
+	}
+	#topo {
+		clear: both;
+		float: left;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#logo {
+		background:#00F;
+		height:75px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#nav-topo {
+		background:#F00;
+		clear: both;
+		float: left;
+		height:50px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#busca {                                                                         
+	display: none;
+																						  
+	}
+	#menu {
+		background: #F90;                                                                             
+	clear: both;                                                                         
+	float: left;                                                                           
+	margin-left: 0;
+	height:50px;                                                                         
+	width: 100%;                                                                               
+	display: block;                                                                      
+	}
+	#slider {
+		clear: both;
+		float: left;
+		height:auto;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-slider {
+		float: left;
+		height:auto;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+		position:relative
+	}
+	#legenda {                                                                          
+	clear: both;                                                                          
+	float: left;  
+	min-height:35px;                                                                     
+	margin-left: 0;                                                                          
+	width: 100%;                                                                       
+	display: block;
+	background:#093;                                                                           
+	}
+	#imagem {   
+	clear: both;                                                                       
+	float: left;
+	min-height: 283px;
+	width: 100%;
+	display: block;
+	}
+	#imagem img{ padding:0; margin:0 auto;}
+	#nav-slider {
+		background:#09F;
+		clear: both;
+		float: left;
+		min-height:50px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#corpo {
+		background: #3C0;
+		clear: both;
+		float: left;
+		min-height:200px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-principal {                                                                                  
+	/*float: left;                                                                                  
+	margin-left: 0;                                                                             
+	width: 100%;                                                                                 
+	display: block; */                                                                                 
+	}
+	#barra-lateral {                                                                                                                                                     
+	/*float: left;	                                                                                  
+	margin-left: 0;                                                              
+	width: 100%;
+	display: block;*/                                                                              
+	}
+	#rodape {
+		background:#333;
+		clear: both;
+		float: left;
+		margin-left: 0;
+		min-height:50px;
+		width: 100%;
+		display: block;
+	}
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	.gridContainer {
+		width: 88.2%;
+		max-width: 1232px;
+		padding-left: 0.9%;
+		padding-right: 0.9%;
+		margin: auto;
+	}
+	#logo {
+		background:#9F0;
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 30%;
+		 
+		
+	}
+	#nav-topo {
+		background:#993;
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 70%;
+	}
+	
+	#busca {
+		background:#C60;
+		clear: both;
+		float: left;
+		height:35%;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#menu {
+		background:#F30;
+		clear: both;
+		float: left;
+		height:65%;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#slider {
+		clear: both;
+		float: left;
+		height: auto/*450px*/;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-slider {
+		float: left;
+		height: auto/*400px*/;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#legenda {/*fazer faux column para esta div*/
+		background:#F30;
+		float: left;
+		height: auto/*400px*/;
+		margin-left: 0;
+		width: 40%;
+		display: block;
+	}
+	
+	#imagem {
+		float: left;
+		height: auto/*400px*/;
+		margin-left: 0;
+		width: 60%;
+		display: block;
+	}
+	#imagem img{padding:0; margin:0 auto;}
+	
+	#nav-slider {
+		background:#09F;
+		clear: both;
+		float: left;
+		height:50px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#corpo {
+		background:#FF0000;
+		clear: both;
+		float: left;
+		height:600px;/*definir min-height e após os testes alterar o height para auto*/
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-principal {
+		background: #F00;
+		float: left;
+		height:600px;
+		margin-left: 0;
+		width: 70%;
+		display: block;
+	}
+	
+	#barra-lateral {
+		background:#999;
+		float: left;
+		height:600px;
+		margin-left: 0;
+		width: 30%;
+		display: block;
+	}
+	
+	#rodape {
+		background:#000;
+		clear: both;
+		float: left;
+		height: 170px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+	.gridContainer {
+		width: 88.2%;
+		max-width: 1232px;
+		padding-left: 0.9%;
+		padding-right: 0.9%;
+		margin: auto;
+	}
+	#logo {
+		background:#9F0;
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 30%;
+		 
+		
+	}
+	#nav-topo {
+		background:#993;
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 70%;
+	}
+	
+	#busca {
+		background:#C60;
+		clear: both;
+		float: left;
+		height:35%;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#menu {
+		background:#F30;
+		clear: both;
+		float: left;
+		height:65%;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#slider {
+		clear: both;
+		float: left;
+		height: auto/*450px*/;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-slider {
+		float: left;
+		height:auto/*400px*/;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#legenda {
+		background:#F30;
+		float: left;
+		height:auto/*400px*/;
+		margin-left: 0;
+		width: 40%;
+		display: block;
+	}
+	
+	#imagem {
+		float: left;
+		height: auto/*400px*/;
+		margin-left: 0;
+		width: 60%;
+		display: block;
+	}
+	#imagem img{ padding:0px; margin:0 auto; }
+	#nav-slider {
+		background:#09F;
+		clear: both;
+		float: left;
+		height:50px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#corpo {
+		background:#FF0000;
+		clear: both;
+		float: left;
+		height:600px;/*definir min-height e após os testes alterar o height para auto*/
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#conteudo-principal {
+		background: #F00;
+		float: left;
+		height:600px;
+		margin-left: 0;
+		width: 70%;
+		display: block;
+	}
+	
+	#barra-lateral {
+		background:#999;
+		float: left;
+		height:600px;
+		margin-left: 0;
+		width: 30%;
+		display: block;
+	}
+	
+	#rodape {
+		background:#000;
+		clear: both;
+		float: left;
+		height: 170px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	.floatLeft{ float:left; margin:5px 10px 5px 0px;}
+	.floatRight{ float:right; padding-right: 250px;}
+	.imargem{ padding-left: 55px !important; padding-right: 10px;}
+}

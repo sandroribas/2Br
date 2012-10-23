@@ -1,0 +1,624 @@
+/*
+Theme Name: 2Br
+Theme URI: http://www.twobrasil.com
+Description: Template da TWOBrasil 2012.
+Author: Sandro Ribas
+Author URI: http://www.twobrasil.com
+Version: 1.0
+*/
+
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+body{width:100%; height:auto; background-image:url(img/bg3.png); background-position:0 top; background-repeat:no-repeat; background-color:#eeeeee;}
+
+.floatLeft, .floatRight{ display:block; margin:15px auto;}
+.imargem{ padding-left: 0px;}
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+@media only screen and (max-width: 480px) {
+	.gridContainer {
+		margin-left: auto;
+		margin-right: auto;
+		width: 87.36%;
+		padding-left: 1.82%;
+		padding-right: 1.82%;
+	}
+	#topo {
+		clear: both;
+		float: left;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#logo {
+		/*background-image: url(img/logo-topo.png);
+		background-repeat:no-repeat;
+		background-position: top 50px;*/
+		height:101px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#nav-topo {
+		clear: both;
+		float: left;
+		height:auto;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+		margin-bottom: 0px;
+	}
+	#vazio{ display:none;}
+	#menu-topo{ height:auto; width: 100%; clear: both; float:left; display:block; background: #eee;}
+	
+	/*NAVEGAÇÃO=====================================================================================*/
+	#navegacao-principal{ width:100%; height: auto; text-align:center; margin:0 auto; padding:0px; list-style: none; }
+	/*=============================================================================================*/
+	#navegacao-principal li { height: auto; width:100%; margin:0; }
+	#navegacao-principal li a { display:block; height:auto; width: 100%; text-decoration:none; margin: 0px; padding: 5px 0px;}
+	#navegacao-principal li strong{ /*padding-top: 10px;  margin-left:20px;*/ color:#ff3300; font-size: 1.1em; letter-spacing:5px}
+	#navegacao-principal li span{ display:none; }
+	
+	/*#navegacao-principal li *:hover{ background: #ccc; color:#333 !important }*/
+	#navegacao-principal li.current-menu-item *{background: #ff3300; border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 1px 1px 0px 0px}
+	#navegacao-principal li.current-menu-item a strong{color: #333;}
+	
+	#busca {                                                                         
+	background:#ff3300;
+		border-bottom: #CCC solid 1px;
+		clear: both;
+		float: left;
+		height:auto;
+		margin-top: 25px;		
+		padding:0;
+		width: 100%;
+		display: block;
+																						  
+	}
+	#widgets-side{ display: none;}
+	#menu {                                                                            
+	clear: both;                                                                         
+	float: left;                                                                           
+	margin-left: 0;
+	height:50px;                                                                         
+	width: 100%;                                                                               
+	display: block;                                                                      
+	}
+	#slides {
+		display: none;
+	}
+
+	#corpo {
+		clear: both;
+		float: left;
+		min-height:200px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	.home-cols{ width:100%; min-height:400px; height:auto; display:block; float:left; text-align:center; border-bottom:#999 dashed 1px;}
+	.home-cols:last-child{ border-bottom:none;}
+	
+	.h1-homecol{margin: 40px 5px 30px 5px; color: #ff3300;}
+	.img-homecol{margin: 0px 0px;}
+	.txt-homecol{ margin: 30px 20px 0px 20px; text-align:left;}
+	
+	#conteudo-principal {                                                                                  
+	/*float: left;                                                                                  
+	margin-left: 0;                                                                             
+	width: 100%;                                                                                 
+	display: block; */                                                                                 
+	}
+	#barra-lateral {                                                                                                                                                     
+	/*float: left;	                                                                                  
+	margin-left: 0;                                                              
+	width: 100%;
+	display: block;*/                                                                              
+	}
+	#rodape {
+		background: #1D1D1D/*#ff3300*/;
+		clear: both;
+		float: left;
+		margin-left: 0;
+		min-height:75px;
+		width: 100%;
+		display: block;
+		border-radius: 10px 10px 0px 0px; 
+		-moz-border-radius: 10px 10px 0px 0px; 
+		-webkit-border-radius: 10px 10px 0px 0px; 
+		border: 2px solid #1d1d1d;
+		margin-top: 10px;
+	}
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	.gridContainer {
+		width: 88.2%;
+		max-width: 1232px;
+		padding-left: 0.9%;
+		padding-right: 0.9%;
+		margin: auto;
+	}
+	#logo {
+		/*background: url(img/logo-topo.png) no-repeat top left;*/
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 30%;
+	}
+	
+	#logo img{ padding-top: 20px}
+	
+	#nav-topo {
+		float: left;
+		height:100px;
+		margin:0 auto;
+		padding:0;
+		width: 70%;
+		position:relative;
+	}
+	#vazio{
+		clear: both;
+		float: left;
+		height: 35px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#menu-topo{ height:65px; width: 100%; clear: both; float:left; display:block;}
+	
+	/*NAVEGAÇÃO=====================================================================================*/
+	#navegacao-principal{ width:100%; height: auto; text-align:center; margin:0 auto; padding:0px; list-style: none;}
+	/*=============================================================================================*/
+	#navegacao-principal li { float: left; height: auto; width:20%; padding: 0px 0px; margin:0;}
+	#navegacao-principal li a { display:block; height:65px; width: 100%; text-decoration:none; margin: 0px;padding:0px;}
+	#navegacao-principal li strong{ display:block; padding-top: 10px; color:#ff3300}
+	#navegacao-principal li span{ display:block; font-size: 13px; color:#333}
+	
+	#navegacao-principal li *:hover{ background: #ccc; border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px}
+	#navegacao-principal li.current-menu-item *{background: #ff3300; border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px}
+	#navegacao-principal li.current-menu-item a strong{color: #CCC;}
+	#navegacao-principal li.current-menu-item a span{ color: #fff ;}
+	
+	
+	
+	#busca {
+		background:#ff3300;
+		border-bottom: #CCC solid 1px;
+		clear: both;
+		float: left;
+		height:auto;
+		margin:0 auto;
+		padding:0;
+		width: 100%;
+		display: block;
+		
+	}
+	#searchform{ height:auto; margin: 0px 20px; padding: 20px 0px; }
+	
+	/*---SLIDER!!!!---------------------------------------------------------------------------------------------------------------------------------------------*/	
+
+/*SLIDER*/
+#slider-topo{ float:right; width:100%; height:450px; display:block;}
+
+#slides {
+	position:relative;
+	width:100%;
+	max-width:850px;
+	height:300px;
+	top:0px;
+	left:0px;
+	z-index:100;
+	display:block;
+	float:left;
+}
+
+.slides_container {
+	width: 100%;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+}
+
+.slides_container div.slide {
+	width:850px;
+	height:300px;
+	display:block;
+}
+
+
+#slides .next,#slides .prev {
+	/*position: absolute;
+	top:0px;
+	left:0px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;*/
+}
+
+#slides .next {
+	/*left:1200px;*/
+}
+
+/*
+	Pagination
+*/
+#slides ul{ text-align:center; width:100%; height:50px;}
+
+
+.pagination {
+	/*margin:3px auto;
+	
+	background:#F93;*/
+}
+
+.pagination li {
+	/*float:left;
+	margin:0 1px;
+	list-style:none;*/
+}
+
+.pagination li a {
+	/*display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;*/
+}
+
+.pagination li.current a {
+	/*background-position:0 -12px;*/
+}
+
+/*
+	Caption
+*/
+
+.caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:100%;
+	width:40%;
+	padding:5px 20px 0 20px;
+	/*background:#000;
+	background:rgba(0,0,0,.5);*/
+	width:40%;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#ff3300;
+	/*border-top:1px solid #000;*/
+	text-shadow:none;
+}
+
+
+/*---SLIDER FIM!!!!---------------------------------------------------------------------------------------------------------------------------------------------*/
+	#corpo {
+		clear: both;
+		float: left;
+		min-height:400px;/*definir min-height e após os testes alterar o height para auto*/
+		height:auto;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	.home-cols{ width:25%; min-height:400px; height:auto; display:block; float:left; text-align:center;}
+	
+	.h1-homecol{margin: 40px 5px 30px 5px; color: #ff3300;}
+	.img-homecol{margin: 0px 0px;}
+	.txt-homecol{ margin: 30px 20px 0px 20px; text-align:left;}
+	
+	#conteudo-principal {
+		margin-bottom: 5px;
+		border-right: 1px solid #CCC;
+		float: left;
+		min-height:250px;
+		height:auto;
+		margin-left: 0;
+		width: 69.7%;
+		display: block;
+	}
+	
+	#barra-lateral {
+		margin-top: 0px;
+		margin-bottom: 5px;
+		float: left;
+		min-height:250px;
+		height:auto;
+		margin-left: 0;
+		width: 30%;
+		display: block;
+	}
+	
+	#barra-lateral h1, h2, h3, h4, h5, p{ margin:0px 0px;}
+	
+	#rodape {
+		background:#1D1D1D/*#ff3300*/;
+		clear: both;
+		float: left;
+		height: 190px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+		border-radius: 10px 10px 0px 0px; 
+		-moz-border-radius: 10px 10px 0px 0px; 
+		-webkit-border-radius: 10px 10px 0px 0px; 
+		border: 2px solid #1d1d1d;
+		margin-top:3px;
+	}
+	.floatLeft{ float:left; margin:5px 10px 5px 0px;}
+	.floatRight{ float:right; padding-right: 250px;}
+	.imargem{ padding-left: 55px !important; padding-right: 10px;}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+	.gridContainer {
+		width: 88.2%;
+		max-width: 1232px;
+		padding-left: 0.9%;
+		padding-right: 0.9%;
+		margin: auto;
+	}
+	#logo {
+		/*background: url(img/logo-topo.png) no-repeat top left;*/
+		float: left;
+		height:100px;
+		margin-left: 0;
+		width: 30%;
+	}
+	
+	#logo img{ padding-top: 0px}
+	
+	#nav-topo {
+		float: left;
+		height:100px;
+		margin:0 auto;
+		padding:0;
+		width: 70%;
+		position:relative;
+	}
+	#vazio{
+		clear: both;
+		float: left;
+		height: 35px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	#menu-topo{ height:65px; width: 100%; clear: both; float:left; display:block;}
+	
+	/*NAVEGAÇÃO=====================================================================================*/
+	#navegacao-principal{ width:100%; height: auto; text-align:center; margin:0 auto; padding:0px; list-style: none;}
+	/*=============================================================================================*/
+	#navegacao-principal li { float: left; height: auto; width:20%; padding: 0px 0px; margin:0;}
+	#navegacao-principal li a { display:block; height:65px; width: 100%; text-decoration:none;  margin: 0px;padding:0px;}
+	#navegacao-principal li strong{ display:block; padding-top: 15px; color:#ff3300}
+	#navegacao-principal li span{ display:block; font-size: 13px; color:#333}
+	
+	#navegacao-principal li *:hover{ background: #ccc; border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px}
+	#navegacao-principal li.current-menu-item *{background: #ff3300; border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px}
+	#navegacao-principal li.current-menu-item a strong{color: #333;}
+	#navegacao-principal li.current-menu-item a span{ color: #fff ;}
+	
+	
+	
+	#busca {
+		background:#ff3300;
+		border-bottom: #CCC solid 1px;
+		clear: both;
+		float: left;
+		height:auto;
+		margin:0 auto;
+		padding:0;
+		width: 100%;
+		display: block;
+		
+	}
+	#searchform{ height:auto; margin: 0px 20px; padding: 20px 0px; }
+
+/*---SLIDER!!!!---------------------------------------------------------------------------------------------------------------------------------------------*/	
+
+/*SLIDER*/
+
+
+#slides {
+	border-top:1px solid #CCC;
+	position:relative;
+	width:100%;
+	max-width:1232px;
+	height:480px;
+	top:0px;
+	left:0px;
+	z-index:100;
+	display:block;
+	float:left;
+	overflow:hidden;
+}
+
+.slides_container {
+	width: 100%;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+}
+
+.slides_container div.slide {
+	width:1232px;
+	height:400px;
+	display:block;
+}
+
+
+#slides .next,#slides .prev {
+	/*position: absolute;
+	top:0px;
+	left:0px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;*/
+}
+
+#slides .next {
+	/*left:1200px;*/
+}
+
+/*
+	Pagination
+*/
+
+.pagination{}
+
+#slides ul{ border-bottom:#CCC 1px solid; border-top: #CCC 1px solid; list-style:none; text-align:center; width:100%;line-height:25px; }
+
+#slides li {
+	text-align: center;
+	margin: 12px 42%;
+	/*margin:0 1px;
+	list-style:none;*/
+}
+
+#slides ul li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	margin-top: 10px;
+	margin-bottom:10px;
+	margin-left: 10px;
+	background-image: url(img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+#slides ul li.current a {
+	background-position:0 -12px;
+}
+/*
+	Caption
+*/
+
+.caption {
+	text-align:left;
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:90%;
+	width:35%;
+	padding:5px 20px 0 20px;
+	/*background:#ff3300;
+	background:rgba(255,51,0,.5);*/
+	font-size:1.3em;
+	line-height:1.33;
+	color:#ff3300;
+	
+	/*border-top:1px solid #000;*/
+	
+}
+
+
+.caption a{ text-decoration:none; outline:none; border: none; text-shadow:2px 2px 6px  #666666; display:block}
+.caption a h1{ color: #ff3300; margin:0px 0px 15px 0px; font-size:2.2em;}
+.caption a p{ color: #666; margin: 0px; font-size:1.22em;}
+
+.caption a *:hover{color:#999 !important;}
+
+
+/*---SLIDER FIM!!!!---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.clear{ clear:both;}
+	#corpo {
+		clear: both;
+		float: left;
+		min-height:400px;/*definir min-height e após os testes alterar o height para auto*/
+		height:auto;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+	}
+	.home-cols{ width:25%; min-height:400px; height:auto; display:block; float:left; text-align:center;}
+	
+	.h1-homecol{margin: 40px 5px 30px 5px; color: #ff3300;}
+	.img-homecol{margin: 0px 0px;}
+	.txt-homecol{ margin: 30px 20px 0px 20px; text-align:left;}
+	
+	#conteudo-principal {
+		margin-bottom: 5px;
+		border-right: 1px solid #CCC;
+		float: left;
+		min-height:250px;
+		height:auto;
+		margin-left: 0;
+		width: 69.9%;
+		display: block;
+	}
+	
+	#barra-lateral {
+		margin-top: 2px;
+		margin-bottom: 5px;
+		float: left;
+		min-height:250px;
+		height:auto;
+		margin-left: 0;
+		width: 30%;
+		display: block;
+	}
+	
+	#barra-lateral h1, h2, h3, h4, h5, p{ margin:20px 20px;}
+	
+	#rodape {
+		background:#1D1D1D/*#ff3300*/;
+		clear: both;
+		float: left;
+		height: 190px;
+		margin-left: 0;
+		width: 100%;
+		display: block;
+		border-radius: 10px 10px 0px 0px; 
+		-moz-border-radius: 10px 10px 0px 0px; 
+		-webkit-border-radius: 10px 10px 0px 0px; 
+		border: 2px solid #1d1d1d;
+		margin-top:3px;
+	}
+	.floatLeft{ float:left; margin:5px 10px 5px 0px;}
+	.floatRight{ float:right; padding-right: 250px;}
+	.imargem{ padding-left: 55px !important; padding-right: 10px;}
+	
+}
