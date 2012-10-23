@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="<?php language_attributes() ?>" class="">
+<html lang="<?php// language_attributes() ?>" class="">
 <!--<![endif]-->
 <!--pelo Dreamweaver CS rola...-->
 <!--glu, glu, yeah, yeah!!-->

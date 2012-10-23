@@ -8,7 +8,7 @@ $personalUrl = get_post_meta($post->ID, 'slide-url', true);//pegando campo perso
    <?php  echo '<a href="'.$personalUrl.'">';  ?>
     	
         <h1><?php the_title(); ?></h1>
-		<p><?php the_excerpt(); ?></p>
+		<?php the_excerpt(); ?>
         <?php echo '</a>';  ?>
     </div><!--caption-->
 </div><!--slide-->
