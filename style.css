@@ -484,25 +484,34 @@ body{width:100%; height:auto; background-image:url(img/bg3.png); background-posi
 }
 
 
+/*Next/prev buttons*/
 #slides .next,#slides .prev {
-	/*position: absolute;
-	top:0px;
-	left:0px;
+	position:absolute;
+	top:205px;
+	left:10px;
 	width:24px;
 	height:43px;
 	display:block;
-	z-index:101;*/
+	z-index:101;
+	opacity:.3;
+}
+#slides .next {
+	left:1079px;
+	
 }
 
-#slides .next {
-	/*left:1200px;*/
+#slides .next:hover {
+	opacity:.7;
+}
+#slides .prev:hover {
+	opacity:.7;
 }
 
 /*
 	Pagination
 */
 
-.pagination{}
+.pagination{ margin-top:1px;}
 
 #slides ul{ border-bottom:#CCC 1px solid; border-top: #CCC 1px solid; list-style:none; text-align:center; width:100%;line-height:25px; }
 
@@ -539,23 +548,24 @@ body{width:100%; height:auto; background-image:url(img/bg3.png); background-posi
 	z-index:500;
 	position:absolute;
 	bottom:-35px;
-	left:0;
-	height:90%;
-	width:35%;
-	padding:5px 20px 0 20px;
-	/*background:#ff3300;
-	background:rgba(255,51,0,.5);*/
+	left:50px;
+	height:85%;
+	width:30%;
+	padding:0px 0px 0 0px;
+	/*background:#eee;
+	background:rgba(238,238,238,.5);*/
 	font-size:1.3em;
 	line-height:1.33;
 	color:#ff3300;
+	display:block;
 	
-	/*border-top:1px solid #000;*/
+	border-top:3px solid #f30;
 	
 }
 
 
-.caption a{ text-decoration:none; outline:none; border: none; text-shadow:2px 2px 6px  #666666; display:block}
-.caption a h1{ color: #ff3300; margin:0px 0px 15px 0px; font-size:2.2em;}
+.caption a{ text-decoration:none; outline:none; border: none; text-shadow:2px 2px 6px   #999999; display:block}
+.caption a h1{ color: #ff3300; margin:15px 0px 10px 0px; font-size:2.2em;}
 .caption a p{ color: #666; margin: 0px; font-size:1.22em;}
 
 .caption a *:hover{color:#999 !important;}

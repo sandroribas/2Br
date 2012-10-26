@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="<?php// language_attributes() ?>" class="">
+<html lang="<?php language_attributes() ?>" class="">
 <!--<![endif]-->
 <!--pelo Dreamweaver CS rola...-->
 <!--glu, glu, yeah, yeah!!-->
@@ -72,4 +72,6 @@ Do the following if you're using your customized build of modernizr (http://www.
     	<div class="slides_container">
 			<?php get_template_part('loop', 'slider');?> 
         </div>
+        <a href="#" class="prev"><img src="<?php bloginfo('template_url'); ?>/img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+		<a href="#" class="next"><img src="<?php bloginfo('template_url'); ?>/img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
 	</div>
